@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-ssh -i ~/.ssh/id_alu_key ubuntu@18.206.246.203
+# bash proj
+ssh -i ~/.ssh/school ubuntu@18.206.246.203
