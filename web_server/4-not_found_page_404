@@ -8,6 +8,30 @@ sudo ufw enable;
 sudo ufw allow 'Nginx HTTP';
 sudo ufw allow 'OpenSSH';
 
-sudo cp ./nginx-2.config /etc/nginx/nginx.config;
+# sudo cp ./nginx-4.conf /etc/nginx/sites-available/default;
+SERVER_CONFIG="server {
+    listen 80 default_server;
+    server_name _;
+    error_page 404 /404.html;
+
+    location / {
+        root https://devark28.github.io/alu-responsive-resume/;
+        # root /var/www/html/;
+        # index index.html;
+        return 'Holberton School';
+    };
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4
+        internal;
+    };
+
+    location = /404.html {
+        return 'Ceci n'est pas une page';
+        internal;
+    }
+}";
+
+echo -e "$SERVER_CONFIG" | sudo tee /etc/nginx/sites-available/default;
 
 sudo service nginx restart;
