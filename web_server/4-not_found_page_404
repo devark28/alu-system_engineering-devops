@@ -13,7 +13,7 @@ sudo ufw allow 'OpenSSH';
 
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html;
 
-sudo cp ./4-nginx.conf /etc/nginx/sites-available/default;
+sudo cp ./4-nginx.conf /etc/nginx/sites-enabled/default;
 # SERVER_CONFIG="server {
 #     listen 80 default_server;
 #     server_name _;
