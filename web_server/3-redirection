@@ -8,26 +8,29 @@ sudo ufw enable;
 sudo ufw allow 'Nginx HTTP';
 sudo ufw allow 'OpenSSH';
 
-# sudo cp ./nginx-3.conf /etc/nginx/sites-enabled/default;
-SERVER_CONFIG="server {
-    listen 80 default_server;
-    server_name _;
+sudo cp ./1-nginx.conf /etc/nginx/nginx.conf;
+sudo service nginx restart;
 
-    location / {
-        root https://devark28.github.io/alu-responsive-resume/;
-        # root /var/www/html/;
-        # index index.html;
-        return 'Holberton School';
-    };
+sudo cp ./nginx-3.conf /etc/nginx/sites-enabled/default;
+# SERVER_CONFIG="server {
+#     listen 80 default_server;
+#     server_name _;
 
-    # return ^ /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
+#     location / {
+#         root https://devark28.github.io/alu-responsive-resume/;
+#         # root /var/www/html/;
+#         # index index.html;
+#         return 'Holberton School';
+#     };
 
-    location /redirect_me {
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
-        internal;
-    }
-}"
+#     # return ^ /redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 
-echo -e "$SERVER_CONFIG" | sudo tee /etc/nginx/sites-enabled/default;
+#     location /redirect_me {
+#         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+#         internal;
+#     }
+# }"
+
+# echo -e "$SERVER_CONFIG" | sudo tee /etc/nginx/sites-enabled/default;
 
 sudo service nginx restart;
