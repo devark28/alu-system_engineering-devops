@@ -18,7 +18,6 @@ SERVER_CONFIG="server {
 
     location / {
         root https://devark28.github.io/alu-responsive-resume/;
-        # root /var/www/html/;
         # index index.html;
         return 'Holberton School';
     };
@@ -28,6 +27,7 @@ SERVER_CONFIG="server {
         internal;
     };
 
+    root /var/www/html/;
     location = /404.html {
         return \"Ceci n'est pas une page\";
         internal;
