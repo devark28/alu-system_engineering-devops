@@ -27,8 +27,8 @@ SERVER_CONFIG="server {
         internal;
     };
 
-    root /var/www/html/;
-    location = /404.html {
+    # root /var/www/html/;
+    location /404.html {
         return \"Ceci n'est pas une page\";
         internal;
     }
