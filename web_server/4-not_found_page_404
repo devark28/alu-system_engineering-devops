@@ -12,4 +12,4 @@ echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html;
 
 sudo cp ./4-nginx.conf /etc/nginx/sites-enabled/default;
 
-sudo service nginx restart;
+sudo nginx -s reload;
