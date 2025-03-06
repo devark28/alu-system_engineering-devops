@@ -2,8 +2,12 @@
 # JDI
 sudo apt-get update;
 sudo apt-get install -y nginx;
+sudo apt-get install -y ufw;
+
+sudo ufw enable;
+sudo ufw allow 'Nginx HTTP';
+sudo ufw allow 'OpenSSH';
 
 echo "Holberton School" | sudo tee /var/www/html/index.html;
-sudo cp ./1-nginx.conf /etc/nginx/nginx.conf;
 
 sudo service nginx restart;
