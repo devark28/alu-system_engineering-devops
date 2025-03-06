@@ -8,6 +8,8 @@ sudo ufw enable;
 sudo ufw allow 'Nginx HTTP';
 sudo ufw allow 'OpenSSH';
 
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html;
+
 # sudo cp ./nginx-4.conf /etc/nginx/sites-available/default;
 SERVER_CONFIG="server {
     listen 80 default_server;
@@ -27,7 +29,7 @@ SERVER_CONFIG="server {
     };
 
     location = /404.html {
-        return 'Ceci n'est pas une page';
+        return \"Ceci n'est pas une page\";
         internal;
     }
 }";
