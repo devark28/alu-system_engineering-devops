@@ -15,10 +15,10 @@ SERVER_CONFIG="server {
     listen 80 default_server;
     server_name _;
     error_page 404 /404.html;
+    root /var/www/html;
 
     location / {
         root https://devark28.github.io/alu-responsive-resume/;
-        # index index.html;
         return 'Holberton School';
     };
 
@@ -27,8 +27,6 @@ SERVER_CONFIG="server {
         internal;
     };
 
-    error_page 404 /404.html;
-    root /var/www/html;
     location /404.html {
         internal;
         # return \"Ceci n'est pas une page\";
