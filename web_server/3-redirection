@@ -10,4 +10,4 @@ sudo ufw allow 'OpenSSH';
 
 sudo cp ./3-nginx.conf /etc/nginx/sites-enabled/default;
 
-sudo service nginx restart;
+sudo nginx -s reload;
