@@ -8,6 +8,6 @@ sudo ufw enable;
 sudo ufw allow 'Nginx HTTP';
 sudo ufw allow 'OpenSSH';
 
-sudo cp ./3-nginx.conf /etc/nginx/sites-enabled/default;
+sudo cp ./nginx.conf /etc/nginx/sites-enabled/default;
 
 sudo nginx -s reload;
