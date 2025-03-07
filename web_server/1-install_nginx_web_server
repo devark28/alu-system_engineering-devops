@@ -9,6 +9,5 @@ sudo ufw allow 'Nginx HTTP';
 sudo ufw allow 'OpenSSH';
 
 sudo cp ./nginx.conf /etc/nginx/sites-enabled/default;
-#echo "Holberton School" | sudo tee /var/www/html/index.html;
 
 sudo service nginx restart;
