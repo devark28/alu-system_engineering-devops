@@ -1,0 +1,421 @@
+:root {
+    color-scheme: light dark;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Inter, serif;
+    text-decoration: none;
+    color: light-dark(black, white);
+    background: light-dark(white, #1e1e1e);
+}
+
+body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+body > section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (min-width: 620px) {
+    body {
+        padding-inline: 64px;
+    }
+}
+
+@media screen and (min-width: 1135px) {
+    body {
+        padding-inline: 128px;
+    }
+}
+
+/* SECTION Bio */
+
+section.bio {
+    padding: 67px 33px;
+    justify-content: flex-start;
+    gap: 32px;
+}
+
+section.bio .profile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    display: flex
+}
+
+section.bio .profile .quote {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+}
+
+section.bio .profile .picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center;
+}
+
+section.bio .text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 24px;
+}
+
+section.bio .text .name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+section.bio .text .description {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.04rem;
+}
+
+@media screen and (min-width: 1135px) {
+    section.bio {
+        flex-direction: row;
+        gap: 176px
+    }
+
+    section.bio .text {
+        align-items: start;
+    }
+
+    section.bio .text .description {
+        text-align: start;
+    }
+
+    section.bio .profile .picture {
+        width: 256px;
+        height: 256px;
+    }
+}
+
+/* SECTION Socials */
+
+section.socials {
+    padding: 29px 183px;
+    gap: 18px;
+    flex-direction: row;
+}
+
+section.socials .resume-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+    background: #D4D4D4;
+    border-radius: 8px;
+}
+
+/* SECTION Technologies */
+
+section.technologies {
+    display: flex;
+    flex-direction: column;
+}
+
+section.technologies > .stack,
+section.technologies > .languages,
+section.technologies > .tools {
+    padding: 32px 28px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 28px;
+    display: flex;
+    width: 100%;
+}
+
+section.technologies .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+section.technologies .logos {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+@media screen and (min-width: 1135px) {
+    section.technologies {
+        flex-direction: row;
+        align-items: start;
+    }
+}
+
+/* SECTION Projects */
+
+section.projects {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 28px;
+}
+
+section.projects > .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+section.projects .list {
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    width: 100%;
+}
+
+section.projects .list details.item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+}
+
+section.projects .list details.item > summary {
+    padding: 20px 28px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 28px;
+    display: flex
+}
+
+section.projects .list details.item > summary .title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.projects .list details.item > .thumbnail {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.projects .list details.item > .thumbnail img {
+    width: 100%;
+}
+
+section.projects .list details.item > .technologies {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 2rem));
+    justify-items: center;
+    align-items: center;
+    padding: 5px 48px;
+    gap: .5rem;
+}
+
+section.projects .list details.item > .technologies > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    object-position: center;
+    object-fit: cover;
+}
+
+section.projects .list div.item.end {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    padding: 20px 40px;
+    gap: 16px;
+    width: 100%;
+}
+
+/* SECTION Experience */
+
+section.experience {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 28px;
+}
+
+section.experience > .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+section.experience .list {
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    width: 100%;
+}
+
+section.experience .list details.item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+}
+
+section.experience .list details.item > summary {
+    padding: 20px 28px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 28px;
+    display: flex
+}
+
+section.experience .list details.item > summary .title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.experience .list details.item > .thumbnail {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.experience .list details.item > .technologies {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 2rem));
+    justify-items: center;
+    align-items: center;
+    padding: 5px 48px;
+    gap: .5rem;
+}
+
+section.experience .list details.item > .technologies > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* SECTION Education */
+
+section.education {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    gap: 28px;
+}
+
+section.education > .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+}
+
+section.education .list {
+    padding: 10px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    width: 100%;
+}
+
+section.education .list details.item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+}
+
+section.education .list details.item > summary {
+    padding: 20px 28px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 28px;
+    display: flex
+}
+
+section.education .list details.item > summary .title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.education .list details.item > .thumbnail {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+section.education .list details.item > .technologies {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(1.5rem, 2rem));
+    justify-items: center;
+    align-items: center;
+    padding: 5px 48px;
+    gap: .5rem;
+}
+
+section.education .list details.item > .technologies > img {
+    height: 1.5rem;
+    width: 1.5rem;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* Generals */
+
+section .list details.item > summary > svg,
+section .list .item.end > svg {
+    height: 24px;
+    width: 24px;
+}
+
+section.socials * {
+    fill: light-dark(black, white);
+}
+
+section .item svg * {
+    stroke: light-dark(black, white);
+}
+
+section div.item {
+    text-decoration: underline;
+    text-decoration-color: light-dark(dark, light);
+}
